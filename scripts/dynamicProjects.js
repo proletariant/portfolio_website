@@ -8,8 +8,8 @@ async function getJSON() {
 }
 
 async function populate(domain) {
-    jsonData = getJSON;
-    
+    jsonData = getJSON();
+
     const titleList = document.getElementsByClassName("title");
     const descList = document.getElementsByClassName("description");
     const linkList = document.getElementsByClassName("link");
