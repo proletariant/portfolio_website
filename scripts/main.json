@@ -13,6 +13,7 @@
             ]
         },
         {
+            "type": "Animation",
             "title": "Test Title 2",
             "description": "Test Desc 2",
             "mediatype": "video",
