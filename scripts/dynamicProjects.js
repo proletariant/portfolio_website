@@ -1,8 +1,8 @@
 /* code iterates between items in JSON file to display projects */
 async function populate(domain) {
     const response = await fetch("main.json");
-    const parse = await response.json();
-    console.log(parse);
+    const jsonData = await response.json();
+    console.log(jsonData);
 
     const titleList = document.getElementsByClassName("title");
     const descList = document.getElementsByClassName("description");
