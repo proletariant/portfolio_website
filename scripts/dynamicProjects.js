@@ -1,9 +1,15 @@
 /* code iterates between items in JSON file to display projects */
-async function populate(domain) {
+async function getJSON() {
     const response = await fetch("main.json");
-    const jsonData = await response.json();
-    console.log(jsonData);
+    const data = await response.json();
+    console.log(data);
 
+    return data;
+}
+
+async function populate(domain) {
+    jsonData = getJSON;
+    
     const titleList = document.getElementsByClassName("title");
     const descList = document.getElementsByClassName("description");
     const linkList = document.getElementsByClassName("link");
