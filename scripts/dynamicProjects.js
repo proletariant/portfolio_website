@@ -1,13 +1,5 @@
 /* code iterates between items in JSON file to display projects */
-async function getJSON() {
-    const response = await fetch("main.json");
-    const data = await response.json();
-    console.log(data);
-
-    return data;
-}
-
-async function populate(domain) {
+function populate(domain) {
     jsonData = getJSON();
 
     const titleList = document.getElementsByClassName("title");
@@ -38,6 +30,14 @@ async function populate(domain) {
         }
         j++;
     }
+}
+
+async function getJSON() {
+    fetch('main.json')
+    .then((response) => response.json())
+    .then((data) => console.log(data));
+
+    return data;
 }
 
 populate(1);
