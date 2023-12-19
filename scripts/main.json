@@ -2,9 +2,11 @@
     "projects":
     [
         {
+            "type": "GameDev",
             "title": "Test Title",
             "description": "Test Desc",
-            "link": "Test Link",
+            "link": "www.google.com",
+            "mediatype": "image",
             "image": [
                 "link1",
                 "link2"
@@ -13,6 +15,7 @@
         {
             "title": "Test Title 2",
             "description": "Test Desc 2",
+            "mediatype": "video",
             "image": [
                 "link3",
                 "link1"

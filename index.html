@@ -15,7 +15,7 @@
         <script src="scripts/main.js"></script>
         <script src="scripts/dynamicProjects.js"></script>
     </head>
-    <body>
+    <body onload="populate('GameDev')">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -34,12 +34,8 @@
             <li><a href="resume.html" class="serious silly">CV</a></li>
         </ul>
 
-        <div class="item">
-            <h1 class="title">If you're seeing this</h1>
-            <p class="description">Fetching projects is not working</p>
-            <a class="link">:c</a>
-            <img class="image">
-        </div>
+        <!--Dynamic block for projects-->
+        <div id="container"></div>
 
         <script src="" async defer></script>
     </body>

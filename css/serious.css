@@ -10,3 +10,7 @@
 .serious ul {
     background-color: black;
 }
+
+.serious .projects {
+    color: green;
+}
