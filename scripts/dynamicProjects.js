@@ -33,7 +33,7 @@ function populate(domain) {
 }
 
 async function getJSON() {
-    fetch('./data.json')
+    fetch('main.json')
     .then((response) => response.json())
     .then((json) => console.log(json));
 
