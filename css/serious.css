@@ -1,0 +1,12 @@
+.serious .button {
+    width: 50%;
+    height: 50%;
+}
+
+.serious a:hover {
+    color: red;
+}
+
+.serious ul {
+    background-color: black;
+}

@@ -1,0 +1,25 @@
+ul {
+    /* list for nav menu */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    background-color: #dddddd;
+    justify-content: space-around;
+}
+
+ul > li {
+    /* centres the nav menu text */
+    display: inline-block;
+}
+
+li {
+    float: left;
+    font-family: 'Futura', sans-serif;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+}
