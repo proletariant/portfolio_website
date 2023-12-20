@@ -28,7 +28,10 @@ li a {
     font-family: 'Futura', sans-serif;
     text-align: right;
     position: relative;
-    height: min-content;
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
 }
 
 .projects h1{
@@ -36,20 +39,35 @@ li a {
 }
 
 .projects a {
-    overflow-wrap: break-word;
 }
 
 .projects p {
-    overflow-wrap: break-word;
 }
 
-.projects iframe {
-    float: left;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    clear: left;
+.projects:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.textSide {
+    float: right;
+    padding-left: 5%;
 }
+
+.contentSide {
+    float: left;
+    left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .contentSide {
+      width: 100%;
+    }
+    .textSide {
+        width: 100%;
+      }
+  }
 
 /* STYLESHEET BUTTONS */
 .button {

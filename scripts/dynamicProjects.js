@@ -18,6 +18,10 @@ async function populate(domain) {
         // create empty div element to fill with project information
         var project = document.createElement("div");
         project.classList.add("projects");
+        var textSide = document.createElement("div");
+        textSide.classList.add("textSide");
+        var contentSide = document.createElement("div");
+        contentSide.classList.add("contentSide");
         // for every project field in the current project
         for (var key in obj) {
             // grab both key and value
@@ -30,19 +34,19 @@ async function populate(domain) {
                 case "title":
                     var title = document.createElement("h1");
                     title.textContent = attrValue;
-                    project.appendChild(document.createElement("hr"));
-                    project.appendChild(title);
+                    // project.appendChild(document.createElement("hr"));
+                    textSide.appendChild(title);
                     break;
                 case "description":
                     var desc = document.createElement("p");
                     desc.textContent = attrValue;
-                    project.appendChild(desc);
+                    textSide.appendChild(desc);
                     break;
                 case "link":
                     var link = document.createElement("a");
                     link.textContent = attrValue;
                     link.setAttribute("href", attrValue);
-                    project.appendChild(link);
+                    textSide.appendChild(link);
                     break;
                 case "image":
                     for (var pic in attrValue) {
@@ -58,12 +62,14 @@ async function populate(domain) {
                     embed.setAttribute("frameborder", "0");
                     embed.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
                     embed.setAttribute("allowfullscreen", true);
-                    project.appendChild(embed);
+                    contentSide.appendChild(embed);
                 default:
                     break;
             }
         }
         // add filled project div to final dynamic div
+        project.appendChild(contentSide);
+        project.appendChild(textSide);
         projectView.appendChild(project);
     }
 }
