@@ -8,8 +8,8 @@
             "link": "https://hexantoid.itch.io/another-game-beta-honours-project",
             "mediatype": "image",
             "image": [
-                "link1",
-                "link2"
+                "/img/cardinal.png",
+                "/img/snael.jpg"
             ]
         },
         {
@@ -18,10 +18,7 @@
             "description": "Test Desc 2",
             "link": "test link",
             "mediatype": "video",
-            "image": [
-                "link3",
-                "link1"
-            ]
+            "video": "https://www.youtube.com/embed/oyQAGpkTqpE?si=QjvG7GmcjicW0woz"
         }
     ]
 }
