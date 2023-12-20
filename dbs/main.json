@@ -8,8 +8,8 @@
             "link": "https://hexantoid.itch.io/another-game-beta-honours-project",
             "mediatype": "image",
             "image": [
-                "../img/cardinal.png",
-                "../img/snael.jpg"
+                "img/cardinal.png",
+                "img/snael.jpg"
             ]
         },
         {
