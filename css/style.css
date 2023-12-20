@@ -26,11 +26,29 @@ li a {
 
 .projects {
     font-family: 'Futura', sans-serif;
+    text-align: right;
+    position: relative;
+    height: min-content;
 }
 
 .projects h1{
     color: aqua;
-    text-align: right;
+}
+
+.projects a {
+    overflow-wrap: break-word;
+}
+
+.projects p {
+    overflow-wrap: break-word;
+}
+
+.projects iframe {
+    float: left;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    clear: left;
 }
 
 /* STYLESHEET BUTTONS */
@@ -48,7 +66,13 @@ li a {
 }
 .hoverImage:hover {
     opacity: 0.7;
- }
+}
+
+ .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
  /* LOWER NAVBAR */
 

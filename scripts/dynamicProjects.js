@@ -30,6 +30,7 @@ async function populate(domain) {
                 case "title":
                     var title = document.createElement("h1");
                     title.textContent = attrValue;
+                    project.appendChild(document.createElement("hr"));
                     project.appendChild(title);
                     break;
                 case "description":
@@ -42,8 +43,22 @@ async function populate(domain) {
                     link.textContent = attrValue;
                     link.setAttribute("href", attrValue);
                     project.appendChild(link);
-                    project.appendChild(document.createElement("hr"));
                     break;
+                case "image":
+                    for (var pic in attrValue) {
+                        // something
+                    }
+                    break;
+                case "video":
+                    var embed = document.createElement("iframe");
+                    embed.setAttribute("width", "560");
+                    embed.setAttribute("height", "315");
+                    embed.setAttribute("src", attrValue);
+                    embed.setAttribute("title", "YouTube video player");
+                    embed.setAttribute("frameborder", "0");
+                    embed.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+                    embed.setAttribute("allowfullscreen", true);
+                    project.appendChild(embed);
                 default:
                     break;
             }
