@@ -15,7 +15,7 @@ async function populate(domain) {
     for (var i = 0; i < jsonData.projects.length; i++) {
         // get current project
         var obj = jsonData.projects[i];
-        // create empty div element to fill with project information
+        // create empty div elements to fill with project information
         var project = document.createElement("div");
         project.classList.add("projects");
         var textSide = document.createElement("div");
@@ -29,32 +29,52 @@ async function populate(domain) {
             var attrValue = obj[key];
             // if the program reads a key of type "type" that isn't listed in the current domain, skip
             if (attrName == "type" && attrValue != domain && domain != null) break;
-            // send name value, description, photos, link (if applicable)
+            // depending on key value
             switch (attrName) {
                 case "title":
+                    // include the title of the project
                     var title = document.createElement("h1");
                     title.textContent = attrValue;
-                    // project.appendChild(document.createElement("hr"));
                     textSide.appendChild(title);
                     break;
                 case "description":
+                    // include a description of the project
                     var desc = document.createElement("p");
                     desc.textContent = attrValue;
                     textSide.appendChild(desc);
                     break;
                 case "link":
+                    // include a link (if applicable)
                     var link = document.createElement("a");
                     link.textContent = attrValue;
                     link.setAttribute("href", attrValue);
                     textSide.appendChild(link);
                     break;
                 case "image":
+                    // building the slidedeck
+                    var j = 1;
                     for (var pic in attrValue) {
                         // something
+                        var slide = document.createElement("div");
+                        slide.classList.add("slideShow");
+                        slide.classList.add("fade");
+                        var currentSlide = document.createElement("div");
+                        currentSlide.classList.add("numberText");
+                        currentSlide.textContent = j + "/" + attrValue.length;
+                        j++;
+                        slide.appendChild(currentSlide);
+                        var img = document.createElement("img");
+                        img.classList.add("image");
+                        img.setAttribute("src", attrValue[pic]);
+                        img.setAttribute("width", "100%");
+                        slide.appendChild(img);
+                        contentSide.appendChild(slide);
                     }
                     break;
                 case "video":
+                    // create an iframe to embed a YouTube video
                     var embed = document.createElement("iframe");
+                    embed.classList.add("embedVideo");
                     embed.setAttribute("width", "560");
                     embed.setAttribute("height", "315");
                     embed.setAttribute("src", attrValue);
@@ -67,18 +87,20 @@ async function populate(domain) {
                     break;
             }
         }
-        // add filled project div to final dynamic div
+        // add filled project div to final dynamic project div
         project.appendChild(contentSide);
         project.appendChild(textSide);
         projectView.appendChild(project);
     }
+    // build slideshows
+    showSlides();
 }
 
 /* helper function to receive JSON file via fetch for inclusion */
 /* TODO: change fetch request to local path (URL is only for local testing) */
 async function getJSON() {
     const response = await fetch('https://proletariant.github.io/portfolio_website/dbs/main.json');
-    //const response = await fetch('/dbs/main.json');
+    //const response = await fetch('../dbs/main.json');
 
     const data = response.json();
 

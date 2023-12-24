@@ -1,47 +1,31 @@
-ul {
-    /* list for nav menu */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    display: flex;
-    background-color: #dddddd;
-    justify-content: space-around;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-ul > li {
-    /* centres the nav menu text */
-    display: inline-block;
-}
-
-li {
-    float: left;
-    font-family: 'Futura', sans-serif;
-}
-
-li a {
-    display: block;
-    padding: 8px;
-}
+/* BODY PROJECTS */
 
 .projects {
     font-family: 'Futura', sans-serif;
     text-align: right;
     position: relative;
-    padding: 10px 10px 10px 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid black;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    flex-direction: row;
 }
 
 .projects h1{
     color: aqua;
 }
 
-.projects a {
-}
-
-.projects p {
+.projects a:hover {
+    color: purple;
 }
 
 .projects:after {
@@ -50,78 +34,88 @@ li a {
     clear: both;
   }
 
+.contentSide {
+    float: left;
+    border: 3px solid blue;
+}
+
 .textSide {
     float: right;
     padding-left: 5%;
+    border: 3px solid green;
 }
 
-.contentSide {
-    float: left;
-    left: 10px;
-}
-
-@media screen and (max-width: 600px) {
-    .contentSide {
-      width: 100%;
+/* Responsive for mobile */
+@media screen and (max-width: 800px) {
+    .projects {
+        flex-direction: column;
+    }
+    .textSide, .contentSide, .slideShow, .image {
+        width: 100%;
+        max-width: 100%;
     }
     .textSide {
+        padding-left: 0;
+    }
+    .contentSide {
+        left: 0;
+    }
+    .embedVideo {
+        aspect-ratio: 16 / 9;
         width: 100%;
-      }
+        height: 100%;
+    }
+    .logo {
+        float: right;
+    }
   }
-
-/* STYLESHEET BUTTONS */
-.button {
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 10px;
-    left: 10px;
-    float: right;
-}
 
 /* LOGO IMAGE */
 .hoverImage {
-    display: inline-block;
+    display: inline;
 }
 .hoverImage:hover {
     opacity: 0.7;
 }
 
- .clearfix::after {
+.clearfix::after {
     content: "";
     clear: both;
     display: table;
 }
 
- /* LOWER NAVBAR */
+/* SLIDE SHOW */
 
- /* Place the navbar at the bottom of the page, and make it stick */
-.navbar {
-    background-color: #333;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .navbar a:hover {
-    background-color: #ddd;
+
+/* Hide the images by default */
+.slideShow {
+    display: none;
+    width: 560px;
+}
+
+/* Number text (1/3 etc) */
+.numberText {
     color: black;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 10px;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
   }
   
-  /* Add a color to the active/current link */
-  .navbar a.active {
-    background-color: #04AA6D;
-    color: white;
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.hamburger {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
   }
