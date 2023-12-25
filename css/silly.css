@@ -9,3 +9,7 @@
 .silly .projects {
     color: blue;
 }
+
+.silly .dropShadow {
+    background: pink;
+}

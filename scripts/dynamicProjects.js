@@ -70,9 +70,12 @@ async function populate(domain) {
                         slide.appendChild(img);
                         contentSide.appendChild(slide);
                     }
+                    contentSide.appendChild(buildDropshadow());
                     break;
                 case "video":
                     // create an iframe to embed a YouTube video
+                    var container = document.createElement("div");
+                    container.classList.add("videoShow");
                     var embed = document.createElement("iframe");
                     embed.classList.add("embedVideo");
                     embed.setAttribute("width", "560");
@@ -82,7 +85,9 @@ async function populate(domain) {
                     embed.setAttribute("frameborder", "0");
                     embed.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
                     embed.setAttribute("allowfullscreen", true);
-                    contentSide.appendChild(embed);
+                    container.appendChild(embed);
+                    contentSide.appendChild(container);
+                    contentSide.appendChild(buildDropshadow());
                 default:
                     break;
             }
@@ -94,6 +99,13 @@ async function populate(domain) {
     }
     // build slideshows
     showSlides();
+}
+
+function buildDropshadow() {
+    var dropShadow = document.createElement("div");
+    dropShadow.classList.add("dropShadow");
+    dropShadow.classList.add("silly");
+    return dropShadow;
 }
 
 /* helper function to receive JSON file via fetch for inclusion */
