@@ -14,12 +14,30 @@ function sillyToggle() {
 
   // If the checkbox is checked, display the output text
   if (checkBox[0].checked == true || checkBox[1].checked == true) {
-    document.body.classList.remove('serious');
-    document.body.classList.add('silly');
+    document.body.classList.toggle('silly');
     console.log(":3");
   } else {
-    document.body.classList.remove('silly');
-    document.body.classList.add('serious');
+    document.body.classList.toggle('silly');
     console.log("wsg");
+  }
+}
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function dropTab() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
   }
 }

@@ -44,32 +44,9 @@ html, body {
     float: right;
     padding-left: 5%;
     border: 3px solid green;
+    max-width: 100%;
+    width: 100%;
 }
-
-/* Responsive for mobile */
-@media screen and (max-width: 800px) {
-    .projects {
-        flex-direction: column;
-    }
-    .textSide, .contentSide, .slideShow, .image {
-        width: 100%;
-        max-width: 100%;
-    }
-    .textSide {
-        padding-left: 0;
-    }
-    .contentSide {
-        left: 0;
-    }
-    .embedVideo {
-        aspect-ratio: 16 / 9;
-        width: 100%;
-        height: 100%;
-    }
-    .logo {
-        float: right;
-    }
-  }
 
 /* LOGO IMAGE */
 .hoverImage {
@@ -109,7 +86,6 @@ html, body {
 
 .videoShow {
     position: relative;
-    width: 560px;
     z-index: 5;
 }
 
@@ -140,3 +116,30 @@ html, body {
     margin: 6px 0;
   }
 
+/* Responsive for mobile */
+@media screen and (max-width: 800px) {
+    .projects {
+        flex-direction: column;
+    }
+    .textSide, .contentSide, .slideShow, .image {
+        width: 100%;
+        max-width: 100%;
+    }
+    .textSide {
+        padding-left: 0;
+    }
+    .contentSide {
+        left: 0;
+    }
+    .embedVideo {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        height: 100%;
+    }
+    .logo {
+        float: right;
+    }
+    .dropShadow {
+        transform: translate(0%, 2%);
+    }
+  }

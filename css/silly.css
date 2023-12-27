@@ -1,15 +1,34 @@
+:root {
+    --non-photo-blue: #8FDAE8ff;
+    --light-sky-blue: #9BCDEFff;
+    --ruddy-blue: #71AAE2ff;
+    --peach-yellow: #FFE0ABff;
+    --peach: #FBB58Aff;
+    --plum-web: #E49CCDff;
+    --space-cadet: #2B3347ff;
+    --alice-blue: #F2F8FFff;
+}
+
+.silly {
+    background-color: var(--alice-blue);
+}
+
 .silly a:hover {
-    color: pink;
+    color: var(--light-sky-blue)
 }
 
-.silly ul {
-    background-color: pink;
+.silly a {
+    color: var(--ruddy-blue);
 }
 
-.silly .projects {
-    color: blue;
+.silly ul, .dropdown-content {
+    background-color: var(--peach-yellow);
+}
+
+.silly .projects p {
+    color: var(--space-cadet);
 }
 
 .silly .dropShadow {
-    background: pink;
+    background: var(--plum-web);
 }

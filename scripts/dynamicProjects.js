@@ -13,6 +13,7 @@ async function populate(domain) {
 
     // for each project in jsonList
     for (var i = 0; i < jsonData.projects.length; i++) {
+        var valid = true;
         // get current project
         var obj = jsonData.projects[i];
         // create empty div elements to fill with project information
@@ -28,7 +29,10 @@ async function populate(domain) {
             var attrName = key;
             var attrValue = obj[key];
             // if the program reads a key of type "type" that isn't listed in the current domain, skip
-            if (attrName == "type" && attrValue != domain && domain != null) break;
+            if (attrName == "type" && attrValue != domain && domain != null) {
+                valid = false;
+                break;   
+            }
             // depending on key value
             switch (attrName) {
                 case "title":
@@ -93,9 +97,11 @@ async function populate(domain) {
             }
         }
         // add filled project div to final dynamic project div
-        project.appendChild(contentSide);
-        project.appendChild(textSide);
-        projectView.appendChild(project);
+        if (valid) {
+            project.appendChild(contentSide);
+            project.appendChild(textSide);
+            projectView.appendChild(project);
+        }
     }
     // build slideshows
     showSlides();
