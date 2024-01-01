@@ -3,8 +3,32 @@
     [
         {
             "type": "GameDev",
-            "title": "Test Title",
-            "description": "Test Desc",
+            "title": "SIGGRAPH Asia 2023 Student-Led Scavenger Hunt",
+            "subtitle": "by Anthony Wallace, Danae-Irene Kyriakaki, Jason Moisiadis, Matt Cabanag, and June Kim",
+            "year": "2023",
+            "description": "Scavenger Hunt AR application built using the A-Frame API: during the convention, markers for relevant programs would be available to scan, showing a 3d model relevant to the program. Meant to engage attendees to explore the convention. I was involved in all programming, and did a majority of work in game design, as well as producing half of the in-game models.",
+            "isDownloadable": false,
+            "link": "https://github.com/proletariant/siggraph-hunt",
+            "image": [
+                {"url": "img/scavhunt1.png", "caption": "Marker test for the Educator's Forum, I produced the mortarboard model"},
+                {"url": "img/scavhunt2.png", "caption": "Marker test for the Business and Innovation Symposium, I produced the briefcase"}
+            ]
+        },
+        {
+            "type": "Academic",
+            "title": "Submitted SIGGRAPH Asia Poster",
+            "subtitle": "by Anthony Wallace, Danae-Irene Kyriakaki, Jason Moisiadis, and June Kim",
+            "year": "2023",
+            "description": "Abstract: We propose an Augmented Reality (AR) enabled location-based game as both a tool to engage delegates and as a basis to examine frameworks for telling stories of Cultural Heritage in the space between the digital and physical for SIGGRAPH Asia 2023. Our initial research noted potential frameworks for constructing the application, such as Serious Games, Loco-Narrative Harmony and the Dérive, as well as potential stories to tell within the local indigenous Eora and Dharug nations. In future research, we will continue making and iterating our application to examine these methods for their usefulness in storytelling.",
+            "isDownloadable": true,
+            "link": "downloads/SIGGRAPH_Asia_2023_Poster_Submission.pdf"
+        },
+        {
+            "type": "GameDev",
+            "title": "another game beta",
+            "subtitle": "Honours submission",
+            "year": "2022",
+            "description": "An honours project made for my 2022 Honours Year; this is the practical component. \n This game is a companion piece to my Honours thesis on redirecting the perception of the NPC beyond simply being a mechanical tool or vestibule for story, to instead see them as affective entities in their own right.",
             "isDownloadable": false,
             "link": "https://hexantoid.itch.io/another-game-beta-honours-project",
             "image": [
@@ -13,20 +37,90 @@
             ]
         },
         {
-            "type": "Animation",
-            "title": "Test Title 2",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "isDownloadable": false,
-            "link": "test link",
-            "video": "https://www.youtube.com/embed/oyQAGpkTqpE?si=QjvG7GmcjicW0woz"
+            "type": "Academic",
+            "title": "Exploring the post-human affective NPC using character-centric game design",
+            "subtitle": "Honours submission",
+            "year": "2022",
+            "description": "Abstract: The construct of the non-player character (or NPC), mechanically, is seen in most modern video games and is an important point of interaction for players. In this paper we take a look at an affective-based approach to examining NPCs based on both their capacity for companionship with the player ascribed through affect theory, as well as their existence as a self-impelled entity through post-human performativity theory. With this approach in mind, we have synthesised a gameplay experience with the companionship of the NPC as a driving force to examine how such a relationship can be defined. In this gameplay, the player is bound to a character that they become emotionally attached to throughout the narrative. We identify a temporal approach to NPC relationships that may enhance interactions with characters by making them non-repeatable through narrative intervention.",
+            "isDownloadable": true,
+            "link": "downloads/Hons_Thesis.pdf"
         },
         {
             "type": "Academic",
-            "title": "Submitted SIGGRAPH Asia Poster",
-            "subtitle": "by me et al",
-            "description": "abstract perhaps",
+            "title": "Is kicking a robot dog morally wrong, or morally permissible?",
+            "subtitle": "Ethics in Computer Science (COMP4920) assignment",
+            "year": "2022",
+            "description": "An assignment to ponder ethical considerations in computer science: in this assignment I argue against the act of harming a robot dog as unvirtuous. In any computer science setting, I believe it is imperative that the engineers behind the work must be self-aware about these considerations.",
             "isDownloadable": true,
-            "link": "downloads/SIGGRAPH_Asia_2023_Poster_Submission.pdf"
+            "link": "downloads/z5206356_Anthony_Ass1.pdf"
+        },
+        {
+            "type": "Animation",
+            "title": "Live2D Model Design, Rigging, and Animation",
+            "description": "Freelance work using the Live2D software to create real-time animated avatars, also known as 'Vtubers'. When commissioned, I work and consult with the client on designing and producing a model, as well as using puppet animation to rig the model for use in face-tracking programs for streaming.",
+            "year": "2021-current",
+            "isDownloadable": false,
+            "link": "https://www.twitch.tv/hexantoid",
+            "image": [
+                {"url": "img/sidney.gif", "caption": "Personal model, used to learn the software"},
+                {"url": "img/sherbet_annotate.png", "caption": "Working with client to produce the model; annotations are for motions to be animated"},
+                {"url": "img/sherbet.gif", "caption": "Finished client model (simulated)"},
+                {"url": "img/daro_annotate.png", "caption": "Working with client to produce the model; annotations are for motions to be animated"},
+                {"url": "img/daro.gif", "caption": "Finished client model (simulated)"}
+            ]
+        },
+        {
+            "type": "VFX",
+            "title": "Visual Effects Stream Coursework",
+            "description": "Various Compositing assignments for the Visual Effects stream of my course. Attributions for group projects will be in video descriptions, otherwise all work is my own.",
+            "year": "2021",
+            "isDownloadable": false,
+            "link": "pleas put playlist link here",
+            "video": "https://www.youtube.com/embed/5IXQ6f6eMxQ?si=wChtNfHVd0PUP6al"
+        },
+        {
+            "type": "Animation",
+            "title": "Performative Animation (SOMA3410) Coursework",
+            "description": "Submitted work for my Performative Animation course at University. This is a showcase of lip-syncing, and showing expression through movement.",
+            "year": "2021",
+            "isDownloadable": false,
+            "link": "pleas put playlist link here",
+            "video": "https://www.youtube.com/embed/5IXQ6f6eMxQ?si=wChtNfHVd0PUP6al"
+        },
+        {
+            "type": "Modelling",
+            "title": "Personal Playermodel for Tower Unite",
+            "description": "A personal playermodel I made for use in the game Tower Unite. I completed modelling myself, and linked the skin with the supplied game skeleton rig, applying weight paints where appropriate.",
+            "year": "2021",
+            "image": [
+                {"url": "img/sidtu1.jpg", "caption": ""},
+                {"url": "img/sidtu2.jpg", "caption": ""},
+                {"url": "img/sidtu3.jpg", "caption": ""}
+            ]
+        },
+        {
+            "type": "Academic",
+            "title": "How can contemporary Internet-based artists integrate posthuman theories in their abstraction of their identities?",
+            "subtitle": "Contemporary Art Theories (DART4300) Assignment",
+            "year": "2021",
+            "description": "An assignment where I used contemporary art theory to position future practice in both Internet art and digital forms of post-human representation. This is an avenue I am still very interested in following.",
+            "isDownloadable": true,
+            "link": "downloads/z5206356_DART4300_Assignment_3.pdf"
+        },
+        {
+            "type": "Illustration",
+            "title": "Various illustrations + commissioned work",
+            "year": "2018-current",
+            "description": "Various commissioned drawings and illustrations, and a good opportunity to practice art techniques.",
+            "isDownloadable": false,
+            "image": [
+                {"url": "img/comm/sidref2021_racc.png", "caption": ""},
+                {"url": "img/comm/skyhourworkspromo.png", "caption": ""},
+                {"url": "img/comm/promosummer.png", "caption": ""},
+                {"url": "img/comm/newcomm.png", "caption": ""},
+                {"url": "img/comm/thingthing.png", "caption": ""},
+                {"url": "img/comm/harucomm.png", "caption": ""}
+            ]
         }
     ]
 }

@@ -35,11 +35,20 @@ async function populate(domain) {
             }
             // depending on key value
             switch (attrName) {
+                case "isDownloadable":
+                    var isDownload = attrValue;
+                    break;
                 case "title":
                     // include the title of the project
                     var title = document.createElement("h1");
                     title.textContent = attrValue;
                     textSide.appendChild(title);
+                    break;
+                case "subtitle":
+                    // subtitle if applicable
+                    var subtitle = document.createElement("h3");
+                    subtitle.textContent = attrValue;
+                    textSide.appendChild(subtitle);
                     break;
                 case "description":
                     // include a description of the project
@@ -52,6 +61,12 @@ async function populate(domain) {
                     var link = document.createElement("a");
                     link.textContent = attrValue;
                     link.setAttribute("href", attrValue);
+                    if (isDownload) {
+                        var downloadImage = document.createElement("i");
+                        downloadImage.setAttribute("class", "bi bi-download");
+                        link.appendChild(downloadImage);
+                        link.setAttribute("download", null);
+                    };
                     textSide.appendChild(link);
                     break;
                 case "image":
@@ -69,9 +84,13 @@ async function populate(domain) {
                         slide.appendChild(currentSlide);
                         var img = document.createElement("img");
                         img.classList.add("image");
-                        img.setAttribute("src", attrValue[pic]);
+                        img.setAttribute("src", attrValue[pic].url);
                         img.setAttribute("width", "100%");
+                        var caption = document.createElement("div");
+                        caption.classList.add("textCaption");
+                        caption.textContent = attrValue[pic].caption;
                         slide.appendChild(img);
+                        slide.appendChild(caption);
                         contentSide.appendChild(slide);
                     }
                     contentSide.appendChild(buildDropshadow());
