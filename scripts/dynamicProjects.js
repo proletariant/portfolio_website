@@ -11,6 +11,8 @@ async function populate(domain) {
         projectView.removeChild(projectView.firstChild);
     }
 
+    var slideCount = 1;
+
     // for each project in jsonList
     for (var i = 0; i < jsonData.projects.length; i++) {
         var valid = true;
@@ -72,9 +74,13 @@ async function populate(domain) {
                 case "image":
                     // building the slidedeck
                     var j = 1;
+                    // slideshow container
+                    var slideShowContainer = document.createElement("div");
+                    slideShowContainer.classList.add("slideshowContainer");
+                    // for every picture in the slideshow
                     for (var pic in attrValue) {
-                        // something
                         var slide = document.createElement("div");
+                        slide.classList.add("mySlides" + slideCount);
                         slide.classList.add("slideShow");
                         slide.classList.add("fade");
                         var currentSlide = document.createElement("div");
@@ -91,9 +97,23 @@ async function populate(domain) {
                         caption.textContent = attrValue[pic].caption;
                         slide.appendChild(img);
                         slide.appendChild(caption);
-                        contentSide.appendChild(slide);
+                        slideShowContainer.appendChild(slide);
                     }
+                    // next slide navigation
+                    var right = document.createElement("a");
+                    right.classList.add("next");
+                    right.setAttribute("onclick", "plusSlides(1, " + (slideCount - 1) + ")");
+                    right.textContent = ">";
+                    slideShowContainer.appendChild(right);
+                    // previous slide navigation
+                    var left = document.createElement("a");
+                    left.classList.add("prev");
+                    left.setAttribute("onclick", "plusSlides(-1, " + (slideCount - 1) + ")");
+                    left.textContent = "<";
+                    slideShowContainer.appendChild(left);
+                    contentSide.appendChild(slideShowContainer);
                     contentSide.appendChild(buildDropshadow());
+                    slideCount++;
                     break;
                 case "video":
                     // create an iframe to embed a YouTube video
@@ -123,7 +143,11 @@ async function populate(domain) {
         }
     }
     // build slideshows
-    showSlides();
+    showSlides(1, 0);
+    showSlides(1, 1);
+    showSlides(1, 2);
+    showSlides(1, 3);
+    showSlides(1, 4);
 }
 
 function buildDropshadow() {

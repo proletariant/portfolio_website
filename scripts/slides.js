@@ -1,13 +1,20 @@
-let slideIndex = 0;
+let slideIndex = [1, 1, 1, 1, 1];
+/* Class the members of each slideshow group with different CSS classes */
+let slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5"]
 
-function showSlides() {
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  // n = slide number to view
+  // no = slideshow identifier
   let i;
-  let slides = document.getElementsByClassName("slideShow");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  let slideshow = document.getElementsByClassName(slideId[no]);
+  if (n > slideshow.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = slideshow.length}
+  for (i = 0; i < slideshow.length; i++) {
+    slideshow[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Change image every 2 seconds
+  slideshow[slideIndex[no] - 1].style.display = "block";
 }
